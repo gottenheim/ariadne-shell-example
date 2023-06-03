@@ -84,3 +84,28 @@ You can always look at the answer if you want:
 make show-answer CARD=04
 ```
 I recommend to always store your cards in git. It gives possibility to undo harmful actions made by mistake and provides complete change history.
+
+## Studying cards
+Answering all questions every time would be tedious. To avoid it, Ariadne contains command that shows you a limited set of new questions every day. After learning, question is scheduled to another day, according to [SM2](https://en.wikipedia.org/wiki/SuperMemo) algorithm, used in [SuperMemo](https://supermemo.com/en) and [Anki](https://apps.ankiweb.net/).
+To enter study mode, type command
+```bash
+make study-cards
+```
+
+![image](https://github.com/gottenheim/ariadne-shell-example/assets/15375180/aaafa794-76e6-465b-a620-40845663ef34)
+
+You will be given all the question files and complete path to card directory. As explained in previous section, you need to open corresponding question.sh, remember answer (or maybe realize you can't), type answer, check it and return to study mode. 
+Hit enter and see the right answer:
+
+![image](https://github.com/gottenheim/ariadne-shell-example/assets/15375180/fadb1410-e583-408c-9a2d-ca45257a4384)
+
+Now you need to choose the most relevant option for your situation:
+* Press A if you forgot the answer completely,
+* Press H if you got the correct answer but significant effort was required to recall it,
+* Press G if you got the correct answer after some hesitation,
+* Press E if you came up with the result almost instantly.
+
+In the same way, you'll be given all cards planned for today. Default limits are hardcoded in makefile and equal to 10 for new cards and cards scheduled to remind today. You can always change them manually.
+Progress for every card is stored in .activities file in card directory, don't forget to commit these files after study session.
+
+Thanks a lot for reading! Feel free to leave feedback in GitHub issues or contact me directly via Telegram or LinkedIn (information is in my profile). 
