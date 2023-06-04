@@ -1,4 +1,4 @@
-ariadne_version=1.0.3
+ariadne_version=1.0.4
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 root_dir := $(dir $(mkfile_path))
 scripts_dir=$(root_dir)scripts/
